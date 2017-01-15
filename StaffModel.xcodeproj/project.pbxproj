@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0743072D1E2BDCD700B0F9A3 /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072C1E2BDCD700B0F9A3 /* Accidental.swift */; };
+		0743072E1E2BDCD700B0F9A3 /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072C1E2BDCD700B0F9A3 /* Accidental.swift */; };
 		2A4BBB04E7E1F0ED97EA5B71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607D707659FA3E380021E4B6 /* Cocoa.framework */; };
 		397C56CC02569D0C5EAE9C65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EB1ED488DC3084B6B41F /* Foundation.framework */; };
 		411D5A0AC1E050BBAF96D5C1 /* StaffModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7314987D6CA227D35BD7228F /* StaffModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11CA998772A2172D18136D5C /* StaffModel iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "StaffModel iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0743072C1E2BDCD700B0F9A3 /* Accidental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accidental.swift; path = StaffModel/Accidental.swift; sourceTree = "<group>"; };
+		11CA998772A2172D18136D5C /* StaffModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaffModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607D707659FA3E380021E4B6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		63DFDE915355E1E112DC8095 /* StaffModel macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "StaffModel macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DFDE915355E1E112DC8095 /* StaffModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaffModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7314987D6CA227D35BD7228F /* StaffModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StaffModel.h; path = StaffModel/StaffModel.h; sourceTree = "<group>"; };
 		8D36EB1ED488DC3084B6B41F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D180455848E2E0642E48FA9C /* StaffModel iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaffModel iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A7F9853F094DF9DDD1FCA7 /* Supporting Files */,
+				0743072C1E2BDCD700B0F9A3 /* Accidental.swift */,
 			);
 			name = StaffModel;
 			sourceTree = "<group>";
@@ -126,9 +130,9 @@
 		ADCBB49AB5203EEA19B48CF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11CA998772A2172D18136D5C /* StaffModel iOS.framework */,
+				11CA998772A2172D18136D5C /* StaffModel.framework */,
 				D180455848E2E0642E48FA9C /* StaffModel iOS Tests.xctest */,
-				63DFDE915355E1E112DC8095 /* StaffModel macOS.framework */,
+				63DFDE915355E1E112DC8095 /* StaffModel.framework */,
 				D7C307378CE994E920A47CAD /* StaffModel macOS Tests.xctest */,
 			);
 			name = Products;
@@ -195,7 +199,7 @@
 			);
 			name = "StaffModel iOS";
 			productName = "StaffModel iOS";
-			productReference = 11CA998772A2172D18136D5C /* StaffModel iOS.framework */;
+			productReference = 11CA998772A2172D18136D5C /* StaffModel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AED88DD7D719CD2DB54C9F2E /* StaffModel iOS Tests */ = {
@@ -204,6 +208,7 @@
 			buildPhases = (
 				639EE1926F772FC0A31F28C2 /* Sources */,
 				A7FC959C3BF0364C1A81248F /* Frameworks */,
+				184DB8898BF704CD58AA450E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -221,6 +226,7 @@
 			buildPhases = (
 				01007AD2E49EEF54BDDB73AA /* Sources */,
 				4B5A70C689211779FFACA3C9 /* Frameworks */,
+				EBC000DD13540D52AA40326C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -246,7 +252,7 @@
 			);
 			name = "StaffModel macOS";
 			productName = "StaffModel macOS";
-			productReference = 63DFDE915355E1E112DC8095 /* StaffModel macOS.framework */;
+			productReference = 63DFDE915355E1E112DC8095 /* StaffModel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -257,6 +263,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					897A225CE963AC9DA3C283BB = {
+						LastSwiftMigration = 0820;
+					};
+					EB9CAC4956561688907E0DB9 = {
+						LastSwiftMigration = 0820;
+					};
+				};
 			};
 			buildConfigurationList = 6E80AF14E42AC5842D64683A /* Build configuration list for PBXProject "StaffModel" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -278,6 +292,47 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		184DB8898BF704CD58AA450E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Articulations.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Pitch.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PitchSpellingTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PlotModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		EBC000DD13540D52AA40326C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Articulations.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Collections.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Pitch.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PitchSpellingTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PlotModel.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01007AD2E49EEF54BDDB73AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -290,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0743072E1E2BDCD700B0F9A3 /* Accidental.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0743072D1E2BDCD700B0F9A3 /* Accidental.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -337,6 +395,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -347,6 +406,8 @@
 				PRODUCT_NAME = StaffModel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -357,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -367,6 +429,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModel/Info.plist;
@@ -378,6 +441,7 @@
 				PRODUCT_NAME = StaffModel;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -386,12 +450,15 @@
 		22C3D262F6EE5E2824843373 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModelTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -401,11 +468,14 @@
 		5BFE4A295F1D30541F189955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,12 +486,15 @@
 		741809D7C834A8CC30C4EAD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModelTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -432,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -440,6 +514,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -450,6 +525,7 @@
 				PRODUCT_NAME = StaffModel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -460,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -470,6 +547,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModel/Info.plist;
@@ -481,6 +559,8 @@
 				PRODUCT_NAME = StaffModel;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -489,11 +569,14 @@
 		C0D3011A2F032EF8B55D7240 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = StaffModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
