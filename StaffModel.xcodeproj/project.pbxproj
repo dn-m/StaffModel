@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		0743072D1E2BDCD700B0F9A3 /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072C1E2BDCD700B0F9A3 /* Accidental.swift */; };
 		0743072E1E2BDCD700B0F9A3 /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072C1E2BDCD700B0F9A3 /* Accidental.swift */; };
+		074307301E2BDD3900B0F9A3 /* Clef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072F1E2BDD3900B0F9A3 /* Clef.swift */; };
+		074307311E2BDD3900B0F9A3 /* Clef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743072F1E2BDD3900B0F9A3 /* Clef.swift */; };
+		074307331E2BDFE600B0F9A3 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307321E2BDFE600B0F9A3 /* StaffModel.swift */; };
+		074307341E2BDFE700B0F9A3 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307321E2BDFE600B0F9A3 /* StaffModel.swift */; };
+		074307361E2BDFF600B0F9A3 /* StaffPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307351E2BDFF600B0F9A3 /* StaffPointModel.swift */; };
+		074307371E2BDFF600B0F9A3 /* StaffPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307351E2BDFF600B0F9A3 /* StaffPointModel.swift */; };
+		074307391E2BE01200B0F9A3 /* StaffSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307381E2BE01200B0F9A3 /* StaffSlot.swift */; };
+		0743073A1E2BE01200B0F9A3 /* StaffSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307381E2BE01200B0F9A3 /* StaffSlot.swift */; };
+		0743073C1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743073B1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift */; };
+		0743073D1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743073B1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift */; };
+		0743073F1E2BE07000B0F9A3 /* Notehead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743073E1E2BE07000B0F9A3 /* Notehead.swift */; };
+		074307401E2BE07000B0F9A3 /* Notehead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0743073E1E2BE07000B0F9A3 /* Notehead.swift */; };
 		2A4BBB04E7E1F0ED97EA5B71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607D707659FA3E380021E4B6 /* Cocoa.framework */; };
 		397C56CC02569D0C5EAE9C65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D36EB1ED488DC3084B6B41F /* Foundation.framework */; };
 		411D5A0AC1E050BBAF96D5C1 /* StaffModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7314987D6CA227D35BD7228F /* StaffModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +48,12 @@
 
 /* Begin PBXFileReference section */
 		0743072C1E2BDCD700B0F9A3 /* Accidental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accidental.swift; path = StaffModel/Accidental.swift; sourceTree = "<group>"; };
+		0743072F1E2BDD3900B0F9A3 /* Clef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Clef.swift; path = StaffModel/Clef.swift; sourceTree = "<group>"; };
+		074307321E2BDFE600B0F9A3 /* StaffModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaffModel.swift; path = StaffModel/StaffModel.swift; sourceTree = "<group>"; };
+		074307351E2BDFF600B0F9A3 /* StaffPointModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaffPointModel.swift; path = StaffModel/StaffPointModel.swift; sourceTree = "<group>"; };
+		074307381E2BE01200B0F9A3 /* StaffSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaffSlot.swift; path = StaffModel/StaffSlot.swift; sourceTree = "<group>"; };
+		0743073B1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaffRepresentablePitch.swift; path = StaffModel/StaffRepresentablePitch.swift; sourceTree = "<group>"; };
+		0743073E1E2BE07000B0F9A3 /* Notehead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notehead.swift; path = StaffModel/Notehead.swift; sourceTree = "<group>"; };
 		11CA998772A2172D18136D5C /* StaffModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaffModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607D707659FA3E380021E4B6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		63DFDE915355E1E112DC8095 /* StaffModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StaffModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +140,13 @@
 			isa = PBXGroup;
 			children = (
 				D8A7F9853F094DF9DDD1FCA7 /* Supporting Files */,
+				074307321E2BDFE600B0F9A3 /* StaffModel.swift */,
+				074307351E2BDFF600B0F9A3 /* StaffPointModel.swift */,
+				0743072F1E2BDD3900B0F9A3 /* Clef.swift */,
+				0743073B1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift */,
 				0743072C1E2BDCD700B0F9A3 /* Accidental.swift */,
+				0743073E1E2BE07000B0F9A3 /* Notehead.swift */,
+				074307381E2BE01200B0F9A3 /* StaffSlot.swift */,
 			);
 			name = StaffModel;
 			sourceTree = "<group>";
@@ -345,7 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074307401E2BE07000B0F9A3 /* Notehead.swift in Sources */,
+				0743073D1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift in Sources */,
+				074307341E2BDFE700B0F9A3 /* StaffModel.swift in Sources */,
 				0743072E1E2BDCD700B0F9A3 /* Accidental.swift in Sources */,
+				074307311E2BDD3900B0F9A3 /* Clef.swift in Sources */,
+				074307371E2BDFF600B0F9A3 /* StaffPointModel.swift in Sources */,
+				0743073A1E2BE01200B0F9A3 /* StaffSlot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0743073F1E2BE07000B0F9A3 /* Notehead.swift in Sources */,
+				0743073C1E2BE02B00B0F9A3 /* StaffRepresentablePitch.swift in Sources */,
+				074307331E2BDFE600B0F9A3 /* StaffModel.swift in Sources */,
 				0743072D1E2BDCD700B0F9A3 /* Accidental.swift in Sources */,
+				074307301E2BDD3900B0F9A3 /* Clef.swift in Sources */,
+				074307361E2BDFF600B0F9A3 /* StaffPointModel.swift in Sources */,
+				074307391E2BE01200B0F9A3 /* StaffSlot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
