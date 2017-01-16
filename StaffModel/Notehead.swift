@@ -7,7 +7,6 @@
 //
 
 public enum Notehead {
-    
     case ord
     case diamondOpen
     case diamondClosed
@@ -15,5 +14,4 @@ public enum Notehead {
     case circleClosed
     case squareOpen
     case squareClosed
-    case custom(String)
 }

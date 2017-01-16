@@ -6,6 +6,8 @@
 //
 //
 
+import PitchSpellingTools
+
 public enum Accidental {
     
     case natural
@@ -23,6 +25,10 @@ public enum Accidental {
     case quarterFlat
     case quarterFlatUp
     case quarterFlatDown
+
+    init?(spelling: PitchSpelling) {
+        self.init(coarse: spelling.quarterStep.rawValue, fine: spelling.eighthStep.rawValue)
+    }
     
     init?(coarse: Float, fine: Float) {
         switch (coarse, fine) {
@@ -44,6 +50,4 @@ public enum Accidental {
         default: return nil
         }
     }
-
 }
-
