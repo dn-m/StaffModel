@@ -26,11 +26,11 @@ public enum Accidental {
     case quarterFlatUp
     case quarterFlatDown
 
-    init?(spelling: PitchSpelling) {
+    public init?(spelling: PitchSpelling) {
         self.init(coarse: spelling.quarterStep.rawValue, fine: spelling.eighthStep.rawValue)
     }
     
-    init?(coarse: Float, fine: Float) {
+    public init?(coarse: Float, fine: Float) {
         switch (coarse, fine) {
         case (+0.0, +0.00): self = .natural
         case (+0.0, +0.25): self = .naturalUp
