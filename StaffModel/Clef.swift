@@ -27,7 +27,7 @@ public struct Clef: Axis {
     }
 }
 
-private func slot(_ clef: Clef.Kind, _ spelledPitch: SpelledPitch) -> StaffSlot {
+internal func slot(_ clef: Clef.Kind, _ spelledPitch: SpelledPitch) -> StaffSlot {
     let slotsPerOctave = 7
     let normalizedOctave = 5 - spelledPitch.octave
     let octaveDisplacement = slotsPerOctave * normalizedOctave
