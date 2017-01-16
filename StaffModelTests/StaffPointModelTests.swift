@@ -10,7 +10,7 @@ import XCTest
 import Pitch
 import PitchSpellingTools
 import StaffModel
-
+    
 class StaffPointModelTests: XCTestCase {
 
     let treble = Clef(.treble)

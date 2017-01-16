@@ -10,6 +10,7 @@ import Collections
 import PitchSpellingTools
 import PlotModel
 
+/// - TODO: Inject transposition as instance property. 
 public struct StaffModel: PlotModel {
     
     public typealias VerticalCoordinate = StaffSlot
