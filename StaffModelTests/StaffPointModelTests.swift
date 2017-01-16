@@ -11,10 +11,6 @@ import Pitch
 import PitchSpellingTools
 import StaffModel
 
-private func == <T: Equatable> (_ a: (T, T), _ b: (T, T)) -> Bool {
-    return a.0 == b.0 && a.1 == b.1
-}
-
 class StaffPointModelTests: XCTestCase {
 
     let treble = Clef(.treble)
