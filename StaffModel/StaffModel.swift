@@ -40,3 +40,12 @@ public struct StaffModel: PlotModel {
         points.safelyAppend(point, toArrayWith: position)
     }
 }
+
+extension StaffModel: AnyCollectionWrapping {
+    
+    // MARK: - `AnyCollectionWrapping`
+    
+    public var collection: AnyCollection<(key: Double, value: [StaffPointModel])> {
+        return AnyCollection(points)
+    }
+}
