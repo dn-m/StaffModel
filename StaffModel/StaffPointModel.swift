@@ -9,10 +9,16 @@
 import PlotModel
 import PitchSpellingTools
 
+/// A single point on a `Staff`.
 public struct StaffPointModel {
     
+    /// A `Set` of `StaffRepresentablePitch` values.
     public let elements: Set<StaffRepresentablePitch>
     
+    // MARK: - Initializers
+    
+    /// Create a `StaffPointModel` with any type of `Sequence` containing 
+    /// `StaffRepresentablePitch` values.
     public init <S: Sequence> (_ sequence: S)
         where S.Iterator.Element == StaffRepresentablePitch
     {
