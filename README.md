@@ -1,6 +1,6 @@
 # StaffModel
 
-![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%203.1-orange.svg)
 [![Build Status](https://travis-ci.org/dn-m/StaffModel.svg?branch=master)](https://travis-ci.org/dn-m/StaffModel) 
 [![codecov](https://codecov.io/gh/dn-m/StaffModel/branch/master/graph/badge.svg)](https://codecov.io/gh/dn-m/StaffModel) 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
