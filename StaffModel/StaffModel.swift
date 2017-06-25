@@ -11,41 +11,22 @@ import PitchSpellingTools
 import PlotModel
 
 /// - TODO: Inject transposition as instance property. 
-public struct StaffModel: PlotModel {
+public struct StaffModel: VerticalPlotModel {
     
+    /// - TODO: In Swift 4, there are associated type constraints. These typealiases should be
+    /// inferrable by the relationship betwen `StaffModel` and `Clef`.
+    public typealias Point = StaffPointModel
     public typealias VerticalCoordinate = StaffSlot
     public typealias HorizontalCoordinate = Double
-    
     public typealias Entity = SpelledPitch
     
-    /// Determines the way that information is mapped onto the horizontal axis.
-    public var horizontalAxis: Clef
+    public let verticalAxis: Clef
+    public let horizontalAxis = DefaultAxis<Double>()
+    public let points: [Double: [StaffPointModel]]
     
-    /// Determines the way that information is mapped onto the vertical axis.
-    public var verticalAxis: Clef
-    
-    /// TODO: Handle multiple voices within single staff point
-    /// - Either, multiple points
-    /// - Or, a point handles multiple voices (or [Set<...>])
-    var points: [Double: [StaffPointModel]] = [:]
-
-    public init(clef: Clef = Clef(.treble)) {
+    /// Creates a `StaffModel` with the given `clef` and the given `points`.
+    public init(clef: Clef = Clef(.treble), points: [Double: [StaffPointModel]]) {
         self.verticalAxis = clef
-        
-        // FIXME: Make linear axis
-        self.horizontalAxis = clef
-    }
-    
-    public mutating func addPoint(_ point: StaffPointModel, at position: Double) {
-        points.safelyAppend(point, toArrayWith: position)
-    }
-}
-
-extension StaffModel: AnyCollectionWrapping {
-    
-    // MARK: - `AnyCollectionWrapping`
-    
-    public var collection: AnyCollection<(key: Double, value: [StaffPointModel])> {
-        return AnyCollection(points)
+        self.points = points
     }
 }
