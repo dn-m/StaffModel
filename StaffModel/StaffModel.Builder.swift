@@ -6,6 +6,8 @@
 //
 //
 
+import Collections
+
 extension StaffModel {
     
     public static var builder: Builder {
@@ -13,13 +15,22 @@ extension StaffModel {
     }
     
     public final class Builder {
-//        
-//        var points: [Double, StaffPointModel] = []
-//        
-//        public init() { }
-//        
-//        public func add(_ point: Point, at position: Double) {
-//            
-//        }
+        
+        var clef: Clef = Clef(.treble)
+        var points: [Double: [StaffPointModel]] = [:]
+        
+        public init() { }
+        
+        public func set(_ clef: Clef) {
+            self.clef = clef
+        }
+        
+        public func add(_ point: Point, at position: Double) {
+            points.safelyAppend(point, toArrayWith: position)
+        }
+        
+        public func build() -> StaffModel {
+            return StaffModel(clef: clef, points: points)
+        }
     }
 }
