@@ -9,6 +9,7 @@
 import XCTest
 import Pitch
 import PitchSpellingTools
+import PlotModel
 import StaffModel
     
 class StaffPointModelTests: XCTestCase {
@@ -17,14 +18,14 @@ class StaffPointModelTests: XCTestCase {
     let bass = Clef(.bass)
     
     func staffPoint(_ pitchSet: PitchSet) -> StaffPointModel {
-        let spelled = pitchSet.map { try! $0.spelledWithDefaultSpelling() }
+        let spelled = pitchSet.map { $0.spelledWithDefaultSpelling() }
         let representable = spelled.map { StaffRepresentablePitch($0) }
         return StaffPointModel(representable)
     }
     
     func testInit() {
         let pitchSet: PitchSet = [60,61,62,63]
-        let spelled = pitchSet.map { try! $0.spelledWithDefaultSpelling() }
+        let spelled = pitchSet.map { $0.spelledWithDefaultSpelling() }
         let representable = spelled.map { StaffRepresentablePitch($0) }
         _ = StaffPointModel(representable)
     }
@@ -77,5 +78,13 @@ class StaffPointModelTests: XCTestCase {
         let point = staffPoint([64,66,67,69,86])
         XCTAssertEqual(point.ledgerLines(treble).1, 0)
         XCTAssertEqual(point.ledgerLines(treble).0, 2)
+    }
+    
+    func testStemConnectionPoint() {
+        let point = staffPoint([57,71,84])
+        let fromAbove = point.stemConnectionPoint(from: .above, axis: treble)
+        let fromBelow = point.stemConnectionPoint(from: .below, axis: treble)
+        XCTAssertEqual(fromAbove, -8)
+        XCTAssertEqual(fromBelow, +8)
     }
 }
