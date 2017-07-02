@@ -29,8 +29,8 @@ extension StaffRepresentablePitch: Equatable {
     {
         return (
             lhs.spelledPitch == rhs.spelledPitch &&
-                lhs.notehead == rhs.notehead &&
-                lhs.accidental == rhs.accidental
+            lhs.notehead == rhs.notehead &&
+            lhs.accidental == rhs.accidental
         )
     }
 }
