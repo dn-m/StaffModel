@@ -6,6 +6,7 @@
 //
 //
 
+import Collections
 import PlotModel
 import PitchSpellingTools
 
@@ -22,7 +23,7 @@ public struct StaffPointModel: PointModel {
     public typealias Entity = SpelledPitch
     public typealias VerticalCoordinate = StaffSlot
     public typealias HorizontalCoordinate = Double
-   
+
     /// Highest `StaffRepresentablePitch`.
     public var highest: StaffRepresentablePitch? {
         return elements.max()
@@ -32,10 +33,10 @@ public struct StaffPointModel: PointModel {
     public var lowest: StaffRepresentablePitch? {
         return elements.min()
     }
-    
+
     /// A `Set` of `StaffRepresentablePitch` values.
     public let elements: Set<StaffRepresentablePitch>
-    
+
     // MARK: - Initializers
     
     /// Create a `StaffPointModel` with any type of `Sequence` containing 
@@ -46,13 +47,6 @@ public struct StaffPointModel: PointModel {
         self.elements = Set(sequence)
     }
     
-    /// Symbolic connection point for slurs.
-    public func slurConnectionPoint(from direction: VerticalDirection, axis: Clef)
-        -> StaffSlot?
-    {
-        fatalError("Slur connection point not yet supported!")
-    }
-    
     /// Symbolic connection point for stems.
     public func stemConnectionPoint(from direction: VerticalDirection, axis: Clef)
         -> StaffSlot?
@@ -60,7 +54,7 @@ public struct StaffPointModel: PointModel {
         guard let representable = direction == .above ? lowest : highest else { return nil }
         return axis.coordinate(representable.spelledPitch)
     }
-    
+
     /// - returns: Ledger lines above and below
     public func ledgerLines(_ clef: Clef) -> (above: Int, below: Int) {
         return (ledgerLinesAbove(clef), ledgerLinesBelow(clef))
@@ -75,7 +69,7 @@ public struct StaffPointModel: PointModel {
         guard let lowest = lowest?.spelledPitch else { return 0 }
         return ledgerLinesAmount(distance: abs(clef.coordinate(lowest)) - 6)
     }
-    
+
     private func ledgerLinesAmount(distance: Int) -> Int {
         return distance >= 0 ? distance / 2 + 1 : 0
     }
