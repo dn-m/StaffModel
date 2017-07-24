@@ -17,14 +17,14 @@ class StaffPointModelTests: XCTestCase {
     let treble = Clef(.treble)
     let bass = Clef(.bass)
     
-    func staffPoint(_ pitchSet: PitchSet) -> StaffPointModel {
+    func staffPoint(_ pitchSet: Set<Pitch>) -> StaffPointModel {
         let spelled = pitchSet.map { $0.spelledWithDefaultSpelling() }
         let representable = spelled.map { StaffRepresentablePitch($0) }
         return StaffPointModel(representable)
     }
     
     func testInit() {
-        let pitchSet: PitchSet = [60,61,62,63]
+        let pitchSet: Set<Pitch> = [60,61,62,63]
         let spelled = pitchSet.map { $0.spelledWithDefaultSpelling() }
         let representable = spelled.map { StaffRepresentablePitch($0) }
         _ = StaffPointModel(representable)
@@ -41,19 +41,16 @@ class StaffPointModelTests: XCTestCase {
     }
     
     func testLedgerLinesBelowMonadInStaff() {
-        
         let point = staffPoint([48])
         XCTAssertEqual(point.ledgerLines(bass).1, 0)
     }
     
     func testLedgerLinesAboveMonadJustAboveNoLedgerLines() {
-        
         let point = staffPoint([79])
         XCTAssertEqual(point.ledgerLines(treble).1, 0)
     }
     
     func testLedgerLinesBelowMonadJustBelowNoLedgerLines() {
-        
         let point = staffPoint([41])
         XCTAssertEqual(point.ledgerLines(bass).1, 0)
     }

@@ -25,6 +25,8 @@
 		074307431E2C4A2900B0F9A3 /* ClefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307411E2C4A2900B0F9A3 /* ClefTests.swift */; };
 		074307451E2C4C9C00B0F9A3 /* StaffPointModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307441E2C4C9C00B0F9A3 /* StaffPointModelTests.swift */; };
 		074307461E2C4C9C00B0F9A3 /* StaffPointModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074307441E2C4C9C00B0F9A3 /* StaffPointModelTests.swift */; };
+		074A8CFF1F267C4C00783BAB /* StaffModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CA998772A2172D18136D5C /* StaffModel.framework */; };
+		074A8D001F267C5200783BAB /* StaffModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DFDE915355E1E112DC8095 /* StaffModel.framework */; };
 		07611D531F003A8D00207E71 /* StaffModel.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07611D521F003A8D00207E71 /* StaffModel.Builder.swift */; };
 		07611D541F003A8D00207E71 /* StaffModel.Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07611D521F003A8D00207E71 /* StaffModel.Builder.swift */; };
 		2A4BBB04E7E1F0ED97EA5B71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607D707659FA3E380021E4B6 /* Cocoa.framework */; };
@@ -80,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD91E371560FE64B8E1C9266 /* Cocoa.framework in Frameworks */,
+				074A8D001F267C5200783BAB /* StaffModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				397C56CC02569D0C5EAE9C65 /* Foundation.framework in Frameworks */,
+				074A8CFF1F267C4C00783BAB /* StaffModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

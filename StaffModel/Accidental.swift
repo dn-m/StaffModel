@@ -30,7 +30,7 @@ public enum Accidental {
         self.init(coarse: spelling.quarterStep.rawValue, fine: spelling.eighthStep.rawValue)
     }
     
-    public init?(coarse: Float, fine: Float) {
+    public init?(coarse: Double, fine: Double) {
         switch (coarse, fine) {
         case (+0.0, +0.00): self = .natural
         case (+0.0, +0.25): self = .naturalUp
